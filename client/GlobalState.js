@@ -27,7 +27,19 @@ export const DataProvider = ({children}) =>{
             refreshToken()
         }
     },[])
+    
+    const state = {
+        token: [token, setToken],
+        productsAPI: ProductsAPI(),
+        userAPI: UserAPI(token),
+        categoriesAPI: CategoriesAPI()
+    }
 
+    return (
+        <GlobalState.Provider value={state}>
+            {children}
+        </GlobalState.Provider>
+    )
 
 
 }
