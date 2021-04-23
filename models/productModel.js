@@ -29,7 +29,21 @@ const productSchema = new mongoose.Schema({
     images:{
         type: Object,
         required: true
+    },
+    category:{
+        type: String,
+        required: true
+    },
+    checked:{
+        type: Boolean,
+        default: false
+    },
+    sold:{
+        type: Number,
+        default: 0
     }
+}, {
+    timestamps: true //important
 })
 
 
