@@ -26,16 +26,16 @@ class APIfeatures {
     }
 
 
-//     sorting(){
-//         if(this.queryString.sort){
-//             const sortBy = this.queryString.sort.split(',').join(' ')
-//             this.query = this.query.sort(sortBy)
-//         }else{
-//             this.query = this.query.sort('-createdAt')
-//         }
+    sorting(){
+        if(this.queryString.sort){
+            const sortBy = this.queryString.sort.split(',').join(' ')
+            this.query = this.query.sort(sortBy)
+        }else{
+            this.query = this.query.sort('-createdAt')
+        }
 
-//         return this;
-//     }
+        return this;
+    }
 
 //     paginating(){
 //         const page = this.queryString.page * 1 || 1
