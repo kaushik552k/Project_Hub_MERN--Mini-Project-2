@@ -50,16 +50,15 @@ function UserAPI(token) {
             alert("This product has been added to cart.")
         }
     }
-}
 
-//     return {
-//         isLogged: [isLogged, setIsLogged],
-//         isAdmin: [isAdmin, setIsAdmin],
-//         cart: [cart, setCart],
-//         addCart: addCart,
-//         history: [history, setHistory]
-//     }
-// }
+    return {
+        isLogged: [isLogged, setIsLogged],
+        isAdmin: [isAdmin, setIsAdmin],
+        cart: [cart, setCart],
+        addCart: addCart,
+        history: [history, setHistory]
+    }
+}
 
 export default UserAPI
  
