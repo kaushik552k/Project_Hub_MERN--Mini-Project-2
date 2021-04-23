@@ -46,24 +46,24 @@ class APIfeatures {
     }
 
 
-// const productCtrl = {
-//     getProducts: async(req, res) =>{
-//         try {
-//             const features = new APIfeatures(Products.find(), req.query)
-//             .filtering().sorting().paginating()
+const productCtrl = {
+    getProducts: async(req, res) =>{
+        try {
+            const features = new APIfeatures(Products.find(), req.query)
+            .filtering().sorting().paginating()
 
-//             const products = await features.query
+            const products = await features.query
 
-//             res.json({
-//                 status: 'success',
-//                 result: products.length,
-//                 products: products
-//             })
+            res.json({
+                status: 'success',
+                result: products.length,
+                products: products
+            })
             
-//         } catch (err) {
-//             return res.status(500).json({msg: err.message})
-//         }
-//     },
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    }
 //     createProduct: async(req, res) =>{
 //         try {
 //             const {product_id, title, price, description, content, images, category} = req.body;
