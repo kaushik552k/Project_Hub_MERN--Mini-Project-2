@@ -39,10 +39,11 @@ const paymentCtrl = {
     }
 }
 
-// const sold = async (id, quantity, oldSold) =>{
-//     await Products.findOneAndUpdate({_id: id}, {
-//         sold: quantity + oldSold
-//     })
+const sold = async (id, quantity, oldSold) =>{
+    await Products.findOneAndUpdate({_id: id}, {
+        sold: quantity + oldSold
+    })
 
+}
 
 module.exports = paymentCtrl
