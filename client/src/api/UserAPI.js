@@ -30,7 +30,7 @@ function UserAPI(token) {
         }
     },[token])
 
-
+    
 
     const addCart = async (product) => {
         if(!isLogged) return alert("Please login to continue buying")
